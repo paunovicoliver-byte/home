@@ -45,9 +45,11 @@ const schema = [webPage(origin, locale, { url, name: c.meta.title, description: 
   </Hero>
 
   <section class="facts" aria-label={c.intro.eyebrow}>
-    <ul class="container facts__list">
-      {c.facts.map((f) => <li>{f}</li>)}
-    </ul>
+    <div class="container">
+      <ul class="facts__list">
+        {c.facts.map((f) => <li>{f}</li>)}
+      </ul>
+    </div>
   </section>
 
   <section class="section">
