@@ -1,0 +1,35 @@
+---
+/** Fallback 404 for paths outside a language prefix. Language-prefixed paths get localized 404s via _redirects. */
+import { localeMeta } from '../i18n/config';
+import { path } from '../i18n/routes';
+import { ui } from '../i18n/ui';
+const order = ['de', 'en', 'sr'] as const;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>404 — DRVENO</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <style>
+      body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #f4efe6; color: #1c1a17; font-family: system-ui, sans-serif; padding: 24px; }
+      main { max-width: 640px; }
+      h1 { font-family: Georgia, serif; font-weight: 400; letter-spacing: 0.3em; }
+      section { border-top: 1px solid rgb(28 26 23 / 0.2); padding-block: 16px; }
+      a { color: inherit; display: inline-block; padding-block: 8px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>DRVENO</h1>
+      {order.map((l) => (
+        <section lang={localeMeta[l].htmlLang}>
+          <p><strong>{ui[l].notFound.title}</strong> {ui[l].notFound.text}</p>
+          <a href={path(l, 'home')}>{ui[l].cta.backHome}</a>
+        </section>
+      ))}
+    </main>
+  </body>
+</html>

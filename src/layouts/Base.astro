@@ -1,0 +1,125 @@
+---
+import '@fontsource/cormorant-garamond/500.css';
+import '@fontsource/cormorant-garamond/500-italic.css';
+import '@fontsource-variable/inter/wght.css';
+import '../styles/global.css';
+import interLatin from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url';
+import serifLatin from '@fontsource/cormorant-garamond/files/cormorant-garamond-latin-500-normal.woff2?url';
+import serifLatinExt from '@fontsource/cormorant-garamond/files/cormorant-garamond-latin-ext-500-normal.woff2?url';
+import headInline from '../scripts/head-inline.js?raw';
+import { getImage } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ConsentBanner from '../components/ConsentBanner.astro';
+import MobileCta from '../components/MobileCta.astro';
+import LangSuggest from '../components/LangSuggest.astro';
+import { locales, localeMeta, defaultLocale, type Locale } from '../i18n/config';
+import { t } from '../i18n/ui';
+import type { Alternates, PageType } from '../lib/pages';
+import type { RouteKey } from '../i18n/routes';
+import { site } from '../config/site';
+import { graph, organization, website } from '../lib/schema';
+import defaultOg from '../assets/images/og-default.jpg';
+
+interface Props {
+  locale: Locale;
+  pageType: PageType;
+  title: string;
+  description: string;
+  alternates: Alternates;
+  noindex?: boolean;
+  ogImage?: ImageMetadata;
+  ogImageAlt?: string;
+  ogType?: 'website' | 'article' | 'product';
+  schema?: Record<string, unknown>[];
+  overlayHeader?: boolean;
+  countryContext?: 'CH' | 'RS' | 'EU';
+  pageEvents?: { event: string; params?: Record<string, unknown> }[];
+  hideMobileCta?: boolean;
+  currentNav?: RouteKey;
+  /** x-default target; defaults to the English version. */
+  xDefault?: string;
+}
+
+const {
+  locale, pageType, title, description, alternates, noindex = false, ogImage = defaultOg, ogImageAlt,
+  ogType = 'website', schema = [], overlayHeader = false, countryContext = 'EU', pageEvents = [],
+  hideMobileCta = false, currentNav, xDefault,
+} = Astro.props;
+
+const meta = localeMeta[locale];
+const tt = t(locale);
+const origin = (Astro.site ?? new URL('https://www.drveno.com')).origin;
+const selfPath = alternates[locale] ?? Astro.url.pathname;
+const canonical = new URL(selfPath, origin).href;
+const og = await getImage({ src: ogImage, width: 1200, height: 630, fit: 'cover', format: 'jpg', quality: 80 });
+const ogUrl = new URL(og.src, origin).href;
+const xDefaultHref = xDefault ?? alternates[defaultLocale];
+
+const ld = graph([organization(origin, locale), website(origin, locale), ...schema]);
+
+const ctx = {
+  language: locale,
+  locale: meta.locale,
+  pageType,
+  countryContext,
+  gtmId: site.analytics.gtmId,
+  consentMode: site.analytics.consentMode,
+  consentVersion: 1,
+  path: selfPath,
+};
+---
+<!doctype html>
+<html lang={meta.htmlLang} dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {noindex ? <meta name="robots" content="noindex, follow" /> : <link rel="canonical" href={canonical} />}
+    {!noindex && locales.filter((l) => alternates[l]).map((l) => (
+      <link rel="alternate" hreflang={localeMeta[l].hreflang} href={new URL(alternates[l]!, origin).href} />
+    ))}
+    {!noindex && xDefaultHref && <link rel="alternate" hreflang="x-default" href={new URL(xDefaultHref, origin).href} />}
+
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={meta.ogLocale} />
+    {locales.filter((l) => l !== locale && alternates[l]).map((l) => <meta property="og:locale:alternate" content={localeMeta[l].ogLocale} />)}
+    <meta property="og:image" content={ogUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    {ogImageAlt && <meta property="og:image:alt" content={ogImageAlt} />}
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta name="theme-color" content="#f4efe6" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href={serifLatin} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={interLatin} as="font" type="font/woff2" crossorigin />
+    {locale === 'sr' && <link rel="preload" href={serifLatinExt} as="font" type="font/woff2" crossorigin />}
+    <slot name="head" />
+
+    <script is:inline set:html={`window.__DRVENO=${JSON.stringify(ctx)};${headInline}`} />
+    <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+  </head>
+  <body data-header={overlayHeader ? 'overlay' : 'solid'} data-page-type={pageType}>
+    <a class="skip-link" href="#main">{tt.a11y.skip}</a>
+    <Header locale={locale} alternates={alternates} current={currentNav} overlay={overlayHeader} />
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    <Footer locale={locale} alternates={alternates} />
+    {!hideMobileCta && <MobileCta locale={locale} />}
+    <LangSuggest locale={locale} alternates={alternates} />
+    <ConsentBanner locale={locale} />
+    {pageEvents.length > 0 && <script type="application/json" id="page-events" set:html={JSON.stringify(pageEvents)} />}
+    <script>
+      import '../scripts/main';
+    </script>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+order: 1
+featured: true
+filters: [windows, heritage, public]
+cover:
+  src: ../../assets/images/heritage-library.jpg
+  alt:
+    en: Façade of a public library with a regular row of wooden windows
+    de: Fassade einer öffentlichen Bibliothek mit einer regelmässigen Reihe von Holzfenstern
+    sr: Fasada javne biblioteke sa pravilnim nizom drvenih prozora
+gallery:
+  - src: ../../assets/images/window-arched.jpg
+    alt:
+      en: Reproduced arched window with glazing bars
+      de: Nachgebautes Rundbogenfenster mit Sprossen
+      sr: Rekonstruisani prozor sa lukom i prečkama
+  - src: ../../assets/images/end-grain.jpg
+    alt:
+      en: Seasoned timber selected for the new frames
+      de: Abgelagertes Holz, ausgewählt für die neuen Rahmen
+      sr: Odležalo drvo izabrano za nove okvire
+beforeAfter:
+  before:
+    src: ../../assets/images/window-before.jpg
+    alt:
+      en: Original library window before the work, with weathered frame
+      de: Originales Bibliotheksfenster vor den Arbeiten, mit verwittertem Rahmen
+      sr: Originalni prozor biblioteke pre radova, sa istrošenim okvirom
+  after:
+    src: ../../assets/images/window-after.jpg
+    alt:
+      en: The same window after repair and refinishing
+      de: Dasselbe Fenster nach Reparatur und neuer Oberfläche
+      sr: Isti prozor nakon popravke i nove završne obrade
+i18n:
+  en:
+    slug: historic-library-windows
+    title: Windows for a historic library
+    summary: Surveying, repairing and reproducing the wooden windows of a public library, so the building could keep its original character.
+    type: Heritage windows · Public building
+    story:
+      - Library windows are made for light and for long days of reading. The originals in this building had served for generations — some were still sound, others had reached the end of their life.
+      - We approached the façade window by window, deciding in each case whether to repair, to reproduce, or — only where unavoidable — to replace.
+    challenge:
+      - Several windows had decayed bottom rails and loose joints, while their profiles and proportions were an essential part of the façade.
+    approach:
+      - We measured the existing windows and recorded their profiles before any work began.
+      - Sound frames were repaired with new timber spliced in where needed; windows beyond repair were reproduced with the same divisions and profiles.
+    materials:
+      - Solid timber matched to the originals
+      - Traditional joinery
+      - Finish agreed with the project team
+    seoDescription: Restoration and reproduction of the historic wooden windows of a public library — surveyed, repaired and rebuilt by hand by DRVENO.
+  de:
+    slug: fenster-historische-bibliothek
+    title: Fenster für eine historische Bibliothek
+    summary: Aufnahme, Reparatur und Nachbau der Holzfenster einer öffentlichen Bibliothek, damit das Gebäude seinen ursprünglichen Charakter behält.
+    type: Historische Fenster · Öffentlicher Bau
+    story:
+      - Bibliotheksfenster sind für Licht und lange Lesetage gemacht. Die Originale in diesem Gebäude hatten Generationen gedient — einige waren noch gesund, andere am Ende ihrer Lebensdauer.
+      - Wir gingen Fenster für Fenster vor und entschieden jeweils, ob repariert, nachgebaut oder — nur wo unvermeidlich — ersetzt wird.
+    challenge:
+      - Bei mehreren Fenstern waren die unteren Rahmenhölzer morsch und die Verbindungen lose, während Profile und Proportionen ein wesentlicher Teil der Fassade waren.
+    approach:
+      - Vor Beginn der Arbeiten haben wir die bestehenden Fenster aufgemessen und ihre Profile aufgenommen.
+      - Gesunde Rahmen wurden repariert und wo nötig mit neuem Holz ergänzt; nicht mehr reparierbare Fenster wurden mit gleicher Teilung und gleichen Profilen nachgebaut.
+    materials:
+      - Massivholz passend zu den Originalen
+      - Traditionelle Holzverbindungen
+      - Oberfläche in Absprache mit dem Projektteam
+    seoDescription: Restaurierung und Nachbau der historischen Holzfenster einer öffentlichen Bibliothek — aufgenommen, repariert und von Hand neu gebaut von DRVENO.
+  sr:
+    slug: prozori-istorijske-biblioteke
+    title: Prozori za istorijsku biblioteku
+    summary: Snimanje, popravka i rekonstrukcija drvenih prozora javne biblioteke, kako bi zgrada sačuvala svoj izvorni karakter.
+    type: Istorijski prozori · Javni objekat
+    story:
+      - Prozori biblioteke napravljeni su za svetlo i za duge dane čitanja. Originali u ovoj zgradi služili su generacijama — neki su još bili zdravi, drugi su došli do kraja svog veka.
+      - Fasadi smo pristupili prozor po prozor, odlučujući u svakom slučaju da li da popravimo, rekonstruišemo ili — samo tamo gde je neizbežno — zamenimo.
+    challenge:
+      - Kod više prozora donji delovi okvira bili su truli, a spojevi labavi, dok su profili i proporcije bili suštinski deo fasade.
+    approach:
+      - Pre početka radova izmerili smo postojeće prozore i snimili njihove profile.
+      - Zdrave okvire smo popravili i po potrebi dopunili novim drvetom; prozore koji se više nisu mogli popraviti rekonstruisali smo sa istom podelom i istim profilima.
+    materials:
+      - Masivno drvo usklađeno sa originalima
+      - Tradicionalni spojevi
+      - Završna obrada dogovorena sa projektnim timom
+    seoDescription: Restauracija i rekonstrukcija istorijskih drvenih prozora javne biblioteke — snimljeni, popravljeni i ručno izrađeni u radionici DRVENO.

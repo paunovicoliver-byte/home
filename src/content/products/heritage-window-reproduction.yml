@@ -1,0 +1,98 @@
+category: heritage
+projectType: heritage-windows
+order: 3
+featured: true
+woods: [oak, larch, spruce]
+customizable: true
+cover:
+  src: ../../assets/images/window-arched.jpg
+  alt:
+    en: Arched historic-style wooden window with glazing bars
+    de: Historisches Holzfenster mit Rundbogen und Sprossen
+    sr: Istorijski drveni prozor sa lukom i prečkama
+gallery:
+  - src: ../../assets/images/window-before.jpg
+    alt:
+      en: Weathered old wooden window before restoration
+      de: Verwittertes altes Holzfenster vor der Restaurierung
+      sr: Istrošen stari drveni prozor pre restauracije
+  - src: ../../assets/images/window-after.jpg
+    alt:
+      en: The same window type after careful renewal
+      de: Derselbe Fenstertyp nach sorgfältiger Erneuerung
+      sr: Isti tip prozora nakon pažljive obnove
+  - src: ../../assets/images/heritage-facade.jpg
+    alt:
+      en: Façade of an older building with a regular rhythm of windows
+      de: Fassade eines älteren Gebäudes mit regelmässiger Fensterreihe
+      sr: Fasada starije zgrade sa pravilnim ritmom prozora
+i18n:
+  en:
+    slug: heritage-window-reproduction
+    name: Heritage Window Reproduction
+    summary: When an original window cannot be saved, we study it closely and rebuild it — profiles, proportions and joinery — so the building keeps its face.
+    story:
+      - Before anything is replaced, we look at what is there. We measure the original, take profiles, note the joinery and the condition of every part.
+      - Where repair is no longer possible, we reproduce the window faithfully, so the new element sits in the façade as if it had always been there. Requirements from heritage authorities are discussed at the start of each project.
+    wood: Matched to the original wherever possible — often oak, larch or spruce.
+    dimensions: Taken from the existing opening and the original element.
+    finish: Matched to the original or to the conservation brief.
+    specs:
+      - label: Survey
+        value: Measurement and profile recording of the original
+      - label: Construction
+        value: Reproduced in solid timber with traditional joinery
+      - label: Coordination
+        value: Details agreed with you, your architect and, where involved, the heritage authority
+    care:
+      - Treat it like the original — gentle cleaning and regular inspection.
+      - Refresh paint or oil on the weather side before it breaks down.
+      - Contact us for repair; parts can be replaced individually.
+    seoTitle: Heritage window reproduction in solid wood
+    seoDescription: Faithful reproduction of historic wooden windows — profiles, proportions and joinery recorded from the original. Handmade in Serbia for buildings across Europe.
+  de:
+    slug: historische-fenster-nachbau
+    name: Nachbau historischer Fenster
+    summary: Wenn ein Originalfenster nicht mehr zu retten ist, studieren wir es genau und bauen es nach — Profile, Proportionen und Verbindungen —, damit das Gebäude sein Gesicht behält.
+    story:
+      - Bevor etwas ersetzt wird, schauen wir genau hin. Wir messen das Original auf, nehmen die Profile ab und halten Verbindungen und Zustand jedes Teils fest.
+      - Wo eine Reparatur nicht mehr möglich ist, bauen wir das Fenster getreu nach, sodass das neue Element in der Fassade sitzt, als wäre es immer da gewesen. Auflagen der Denkmalpflege besprechen wir zu Beginn jedes Projekts.
+    wood: Wenn möglich wie im Original — häufig Eiche, Lärche oder Fichte.
+    dimensions: Abgenommen an der bestehenden Öffnung und am Originalelement.
+    finish: Dem Original oder den Vorgaben der Denkmalpflege entsprechend.
+    specs:
+      - label: Bestandsaufnahme
+        value: Aufmass und Profilaufnahme am Original
+      - label: Konstruktion
+        value: Nachbau in Massivholz mit traditionellen Holzverbindungen
+      - label: Abstimmung
+        value: Details mit Ihnen, Ihrer Architektin oder Ihrem Architekten und gegebenenfalls der Denkmalpflege abgestimmt
+    care:
+      - Wie das Original behandeln — schonend reinigen und regelmässig kontrollieren.
+      - Farbe oder Öl auf der Wetterseite auffrischen, bevor die Oberfläche aufbricht.
+      - Für Reparaturen melden Sie sich bei uns; einzelne Teile lassen sich ersetzen.
+    seoTitle: Nachbau historischer Holzfenster
+    seoDescription: Getreuer Nachbau historischer Holzfenster — Profile, Proportionen und Verbindungen vom Original abgenommen. Von Hand gefertigt in Serbien.
+  sr:
+    slug: rekonstrukcija-istorijskih-prozora
+    name: Rekonstrukcija istorijskog prozora
+    summary: Kada originalni prozor ne može da se sačuva, pažljivo ga proučavamo i pravimo ponovo — profile, proporcije i spojeve — kako bi zgrada sačuvala svoje lice.
+    story:
+      - Pre nego što se bilo šta zameni, gledamo šta postoji. Merimo original, uzimamo profile i beležimo spojeve i stanje svakog dela.
+      - Tamo gde popravka više nije moguća, verno rekonstruišemo prozor, tako da novi element stoji u fasadi kao da je oduvek bio tu. Uslove službe zaštite spomenika razmatramo na samom početku svakog projekta.
+    wood: Kad god je moguće, kao u originalu — često hrast, ariš ili smrča.
+    dimensions: Uzimaju se sa postojećeg otvora i originalnog elementa.
+    finish: Usklađena sa originalom ili sa konzervatorskim uslovima.
+    specs:
+      - label: Snimanje stanja
+        value: Merenje i snimanje profila originala
+      - label: Konstrukcija
+        value: Izrada od masivnog drveta sa tradicionalnim spojevima
+      - label: Usaglašavanje
+        value: Detalji se dogovaraju sa vama, vašim arhitektom i, po potrebi, sa službom zaštite
+    care:
+      - Održavajte ga kao original — nežno čišćenje i redovan pregled.
+      - Obnovite boju ili ulje na strani izloženoj vremenu pre nego što površina popusti.
+      - Za popravke nam se javite; delovi mogu da se zamene pojedinačno.
+    seoTitle: Rekonstrukcija istorijskih drvenih prozora
+    seoDescription: Verna rekonstrukcija istorijskih drvenih prozora — profili, proporcije i spojevi preuzeti sa originala. Ručna izrada u Srbiji za objekte širom Evrope.

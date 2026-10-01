@@ -1,0 +1,76 @@
+category: tables
+projectType: table
+order: 6
+featured: false
+woods: [oak, ash]
+customizable: true
+cover:
+  src: ../../assets/images/table-minimal.jpg
+  alt:
+    en: Minimal light-wood table with slender legs
+    de: Schlichter Tisch aus hellem Holz mit schlanken Beinen
+    sr: Jednostavan sto od svetlog drveta sa tankim nogama
+gallery:
+  - src: ../../assets/images/grain-oak.jpg
+    alt:
+      en: Straight oak grain
+      de: Gerade Eichenmaserung
+      sr: Prava šara hrastovine
+i18n:
+  en:
+    slug: minimal-oak-table
+    name: Minimal Oak Table
+    summary: Reduced to what matters — a clean top, slender legs and careful joints. Quiet enough for a modern interior, warm enough to live with.
+    story:
+      - In a minimal piece, nothing can hide. Every joint, every edge and every proportion has to be right, because there is nothing else to look at.
+      - We make this table in oak or ash, finished to keep the wood light and its surface pleasant to touch.
+    wood: Oak or ash.
+    dimensions: Example 180 × 85 × 74 cm — made to measure.
+    finish: Light hard-wax oil.
+    specs:
+      - label: Top
+        value: Solid wood with softened edges
+      - label: Joints
+        value: Traditional, carefully fitted
+    care:
+      - Wipe with a damp cloth; dry immediately.
+      - Re-oil when the surface looks dry.
+    seoDescription: A minimal handmade table in solid oak or ash with slender legs and careful joinery. Made to measure in Serbia.
+  de:
+    slug: schlichter-eichentisch
+    name: Schlichter Eichentisch
+    summary: Auf das Wesentliche reduziert — eine klare Platte, schlanke Beine und sorgfältige Verbindungen. Ruhig genug für moderne Räume, warm genug zum Leben.
+    story:
+      - Bei einem schlichten Stück kann sich nichts verstecken. Jede Verbindung, jede Kante und jede Proportion muss stimmen, weil es sonst nichts zu sehen gibt.
+      - Wir fertigen diesen Tisch in Eiche oder Esche, mit einer Oberfläche, die das Holz hell lässt und sich angenehm anfühlt.
+    wood: Eiche oder Esche.
+    dimensions: Beispiel 180 × 85 × 74 cm — nach Mass.
+    finish: Helles Hartwachsöl.
+    specs:
+      - label: Platte
+        value: Massivholz mit gebrochenen Kanten
+      - label: Verbindungen
+        value: Traditionell und sorgfältig eingepasst
+    care:
+      - Mit einem feuchten Tuch abwischen und sofort trocknen.
+      - Nachölen, sobald die Oberfläche trocken wirkt.
+    seoDescription: Schlichter, handgefertigter Tisch aus massiver Eiche oder Esche mit schlanken Beinen und sorgfältigen Verbindungen. Nach Mass in Serbien gefertigt.
+  sr:
+    slug: jednostavan-hrastov-sto
+    name: Jednostavan hrastov sto
+    summary: Sveden na suštinu — čista ploča, tanke noge i pažljivi spojevi. Dovoljno miran za moderan prostor, dovoljno topao za život.
+    story:
+      - Kod jednostavnog komada ništa ne može da se sakrije. Svaki spoj, svaka ivica i svaka proporcija moraju da budu tačni, jer nema ničeg drugog da odvuče pogled.
+      - Ovaj sto pravimo od hrasta ili jasena, sa završnom obradom koja čuva svetlinu drveta i prijatna je na dodir.
+    wood: Hrast ili jasen.
+    dimensions: Primer 180 × 85 × 74 cm — po meri.
+    finish: Svetli tvrdo uljani vosak.
+    specs:
+      - label: Ploča
+        value: Masivno drvo sa oborenim ivicama
+      - label: Spojevi
+        value: Tradicionalni, pažljivo uklopljeni
+    care:
+      - Brišite vlažnom krpom i odmah osušite.
+      - Nauljite kada površina deluje suvo.
+    seoDescription: Jednostavan ručno izrađen sto od masivnog hrasta ili jasena, sa tankim nogama i pažljivim spojevima. Izrada po meri u Srbiji.

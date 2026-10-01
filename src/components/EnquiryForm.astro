@@ -1,0 +1,285 @@
+---
+/**
+ * One form engine for three enquiry types, fully translated (labels, hints,
+ * options, validation, loading, success, error). Field names and option
+ * values are language-neutral so every submission arrives in the same shape;
+ * the hidden `language` field tells the workshop which language to reply in.
+ *
+ * Delivery: Netlify Forms by default (detected from this static HTML,
+ * file uploads supported). Set PUBLIC_FORM_ENDPOINT to post elsewhere.
+ * Without JavaScript the form still submits natively to the thank-you page.
+ */
+import Icon from './Icon.astro';
+import { t } from '../i18n/ui';
+import { localeMeta, type Locale } from '../i18n/config';
+import { path } from '../i18n/routes';
+import { site } from '../config/site';
+
+type Kind = 'quote' | 'consultation' | 'contact';
+interface Props {
+  locale: Locale;
+  kind: Kind;
+  id?: string;
+  /** Product id → localized name, for "?piece=" prefill on the quote form. */
+  pieces?: Record<string, string>;
+}
+const { locale, kind, id = `form-${kind}`, pieces = {} } = Astro.props;
+const tt = t(locale);
+const f = tt.form;
+const v = f.validation;
+
+const netlify = !site.forms.endpoint;
+const action = netlify ? path(locale, 'thanks') : site.forms.endpoint;
+const maxMb = Math.round(site.forms.maxTotalBytes / (1024 * 1024));
+
+const regionNames = new Intl.DisplayNames([localeMeta[locale].intl], { type: 'region' });
+const pinned = ['CH', 'RS', 'DE', 'AT'];
+const europe = ['AD','AL','BA','BE','BG','CY','CZ','DK','EE','ES','FI','FR','GB','GR','HR','HU','IE','IS','IT','LI','LT','LU','LV','MC','MD','ME','MK','MT','NL','NO','PL','PT','RO','SE','SI','SK','SM','UA','XK'];
+const collator = new Intl.Collator(localeMeta[locale].intl);
+const countries = [
+  ...pinned.map((c) => ({ code: c, name: regionNames.of(c)! })),
+  ...europe.map((c) => ({ code: c, name: regionNames.of(c)! })).sort((a, b) => collator.compare(a.name, b.name)),
+];
+
+const messages = {
+  ...v,
+  fileCount: v.fileCount.replace('{max}', String(site.forms.maxFiles)),
+  fileSize: v.fileSize.replace('{max}', String(maxMb)),
+  summaryOne: f.errorSummaryOne,
+  summaryMany: f.errorSummaryMany,
+  sending: f.sending,
+  filesSelected: f.fields.filesSelected,
+  filesNone: f.fields.filesNone,
+};
+const submitLabel = f[kind].submit;
+const successText = f[kind].success;
+
+const req = (label: string) => `${label}`;
+---
+<div class="enquiry" data-enquiry-wrap>
+  <form
+    id={id}
+    name={kind}
+    method="POST"
+    action={action}
+    enctype="multipart/form-data"
+    novalidate
+    data-enquiry={kind}
+    data-endpoint={site.forms.endpoint || ''}
+    data-max-files={site.forms.maxFiles}
+    data-max-bytes={site.forms.maxTotalBytes}
+    data-accept={site.forms.accept}
+    {...(netlify ? { 'data-netlify': 'true', 'netlify-honeypot': 'bot-field' } : {})}
+  >
+    <script type="application/json" data-messages set:html={JSON.stringify(messages)} />
+    {Object.keys(pieces).length > 0 && <script type="application/json" data-pieces set:html={JSON.stringify(pieces)} />}
+    <input type="hidden" name="form-name" value={kind} />
+    <input type="hidden" name="language" value={locale} />
+    <input type="hidden" name="source_page" value="" data-source-page />
+    <p class="visually-hidden" aria-hidden="true">
+      <label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+    </p>
+
+    <p class="form-note">{f.requiredNote}</p>
+    <div class="form-status" data-form-status role="alert" tabindex="-1" hidden></div>
+
+    {kind === 'quote' && (
+      <>
+        <input type="hidden" name="reference" value="" data-reference />
+        <p class="reference-note" data-reference-note hidden>
+          <span>{f.fields.reference}:</span> <strong data-reference-name></strong>
+        </p>
+        <fieldset class="field choices" id={`${id}-type`} data-group="project_type" data-required="choice" aria-describedby={`${id}-type-error`}>
+          <legend class="label">{f.fields.projectType}<span class="req" aria-hidden="true">*</span></legend>
+          {Object.entries(f.projectTypes).map(([value, label]) => (
+            <label class="choice"><input type="radio" name="project_type" value={value} /><span>{label}</span></label>
+          ))}
+          <p class="error" id={`${id}-type-error`} hidden></p>
+        </fieldset>
+      </>
+    )}
+
+    <div class="field-row">
+      <div class="field">
+        <label class="label" for={`${id}-name`}>{f.fields.name}<span class="req" aria-hidden="true">*</span></label>
+        <input class="input" id={`${id}-name`} name="name" type="text" autocomplete="name" required maxlength="120" data-required="text" aria-describedby={`${id}-name-error`} />
+        <p class="error" id={`${id}-name-error`} hidden></p>
+      </div>
+      <div class="field">
+        <label class="label" for={`${id}-email`}>{f.fields.email}<span class="req" aria-hidden="true">*</span></label>
+        <input class="input" id={`${id}-email`} name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" required maxlength="160" data-required="text" data-type="email" aria-describedby={`${id}-email-error`} />
+        <p class="error" id={`${id}-email-error`} hidden></p>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label class="label" for={`${id}-phone`}>
+          {f.fields.phone}
+          {kind === 'consultation' ? <span class="req" aria-hidden="true">*</span> : <span class="opt">({f.optional})</span>}
+        </label>
+        <input class="input" id={`${id}-phone`} name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="40" data-type="phone" {...(kind === 'consultation' ? { required: true, 'data-required': 'text' } : {})} aria-describedby={`${id}-phone-hint ${id}-phone-error`} />
+        <p class="hint" id={`${id}-phone-hint`}>{f.fields.phoneHint}</p>
+        <p class="error" id={`${id}-phone-error`} hidden></p>
+      </div>
+      {kind !== 'contact' && (
+        <div class="field">
+          <label class="label" for={`${id}-city`}>{f.fields.city}<span class="opt">({f.optional})</span></label>
+          <input class="input" id={`${id}-city`} name="city" type="text" autocomplete="address-level2" maxlength="120" />
+        </div>
+      )}
+    </div>
+
+    {kind === 'quote' && (
+      <>
+        <div class="field">
+          <label class="label" for={`${id}-country`}>{f.fields.country}<span class="req" aria-hidden="true">*</span></label>
+          <select class="select" id={`${id}-country`} name="country" autocomplete="country" required data-required="select" aria-describedby={`${id}-country-error`}>
+            <option value="">{f.fields.countryPlaceholder}</option>
+            {countries.map((c) => <option value={c.code}>{c.name}</option>)}
+            <option value="other">{f.fields.countryOther}</option>
+          </select>
+          <p class="error" id={`${id}-country-error`} hidden></p>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label class="label" for={`${id}-dimensions`}>{f.fields.dimensions}<span class="opt">({f.optional})</span></label>
+            <input class="input" id={`${id}-dimensions`} name="dimensions" type="text" maxlength="200" aria-describedby={`${id}-dimensions-hint`} />
+            <p class="hint" id={`${id}-dimensions-hint`}>{f.fields.dimensionsHint}</p>
+          </div>
+          <div class="field">
+            <label class="label" for={`${id}-wood`}>{f.fields.wood}<span class="opt">({f.optional})</span></label>
+            <select class="select" id={`${id}-wood`} name="wood">
+              <option value="">{f.fields.woodPlaceholder}</option>
+              {Object.entries(f.woods).map(([value, label]) => <option value={value}>{label}</option>)}
+            </select>
+          </div>
+        </div>
+      </>
+    )}
+
+    {kind === 'consultation' && (
+      <>
+        <fieldset class="field choices" id={`${id}-ctype`} data-group="consultation_type" data-required="choice" aria-describedby={`${id}-ctype-error`}>
+          <legend class="label">{f.fields.consultationType}<span class="req" aria-hidden="true">*</span></legend>
+          {(['switzerland', 'video', 'phone', 'online'] as const).map((value) => (
+            <label class="choice"><input type="radio" name="consultation_type" value={value} checked={value === 'switzerland'} /><span>{f.consultationTypes[value]}</span></label>
+          ))}
+          <p class="error" id={`${id}-ctype-error`} hidden></p>
+        </fieldset>
+        <div class="field-row">
+          <div class="field">
+            <label class="label" for={`${id}-ptype`}>{f.fields.projectType}<span class="opt">({f.optional})</span></label>
+            <select class="select" id={`${id}-ptype`} name="project_type">
+              <option value="">—</option>
+              {Object.entries(f.projectTypes).map(([value, label]) => <option value={value}>{label}</option>)}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label" for={`${id}-time`}>{f.fields.preferredTime}<span class="opt">({f.optional})</span></label>
+            <select class="select" id={`${id}-time`} name="preferred_time">
+              <option value="">—</option>
+              {Object.entries(f.preferredTimes).map(([value, label]) => <option value={value}>{label}</option>)}
+            </select>
+          </div>
+        </div>
+      </>
+    )}
+
+    <div class="field">
+      <label class="label" for={`${id}-message`}>
+        {kind === 'quote' ? f.fields.description : f.fields.message}
+        {kind === 'consultation' ? <span class="opt">({f.optional})</span> : <span class="req" aria-hidden="true">*</span>}
+      </label>
+      <textarea
+        class="textarea"
+        id={`${id}-message`}
+        name="message"
+        rows="6"
+        maxlength="4000"
+        {...(kind !== 'consultation' ? { required: true, 'data-required': 'text', 'data-minlength': '10' } : {})}
+        aria-describedby={kind === 'quote' ? `${id}-message-hint ${id}-message-error` : `${id}-message-error`}
+      ></textarea>
+      {kind === 'quote' && <p class="hint" id={`${id}-message-hint`}>{f.fields.descriptionHint}</p>}
+      <p class="error" id={`${id}-message-error`} hidden></p>
+    </div>
+
+    {kind === 'quote' && (
+      <>
+        <div class="field">
+          <span class="label" id={`${id}-files-label`}>{f.fields.files}<span class="opt">({f.optional})</span></span>
+          <div class="upload">
+            <input class="upload__input" id={`${id}-files`} name="files" type="file" multiple accept={site.forms.accept} data-files aria-labelledby={`${id}-files-label`} aria-describedby={`${id}-files-hint ${id}-files-status ${id}-files-error`} />
+            <label class="upload__btn btn btn--ghost" for={`${id}-files`}><Icon name="upload" size={18} />{f.fields.filesChoose}</label>
+            <p class="upload__status" id={`${id}-files-status`} data-files-status aria-live="polite">{f.fields.filesNone}</p>
+          </div>
+          <ul class="upload__list" data-files-list></ul>
+          <p class="hint" id={`${id}-files-hint`}>{f.fields.filesHint}</p>
+          <p class="error" id={`${id}-files-error`} hidden></p>
+        </div>
+        <fieldset class="field choices" data-group="consultation_type">
+          <legend class="label">{f.fields.consultationType}<span class="opt">({f.optional})</span></legend>
+          {(['video', 'phone', 'online', 'switzerland'] as const).map((value) => (
+            <label class="choice"><input type="radio" name="consultation_type" value={value} /><span>{f.consultationTypes[value]}</span></label>
+          ))}
+        </fieldset>
+        <div class="field">
+          <label class="label" for={`${id}-timeline`}>{f.fields.timeline}<span class="opt">({f.optional})</span></label>
+          <select class="select" id={`${id}-timeline`} name="timeline">
+            <option value="">{f.fields.timelinePlaceholder}</option>
+            {Object.entries(f.timelines).map(([value, label]) => <option value={value}>{label}</option>)}
+          </select>
+        </div>
+      </>
+    )}
+
+    <div class="field consent-field">
+      <label class="check" for={`${id}-privacy`}>
+        <input type="checkbox" id={`${id}-privacy`} name="privacy_consent" value="yes" required data-required="consent" aria-describedby={`${id}-privacy-error`} />
+        <span>{f.fields.privacyConsent} <a href={path(locale, 'privacy')}>{f.fields.privacyMore}</a><span class="req" aria-hidden="true">*</span></span>
+      </label>
+      <p class="error" id={`${id}-privacy-error`} hidden></p>
+    </div>
+
+    <div class="form-actions">
+      <button class="btn btn--block-sm" type="submit" data-submit>
+        <span data-submit-label>{submitLabel}</span>
+        <Icon name="arrow" class="arrow" />
+      </button>
+    </div>
+  </form>
+
+  <div class="form-success" data-form-success hidden tabindex="-1" role="status">
+    <Icon name="check" size={32} />
+    <h3 class="h3">{f.successTitle}</h3>
+    <p class="lead">{successText}</p>
+  </div>
+  <template data-error-template>
+    <span>{f.errorGeneric} <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>.</span>
+  </template>
+</div>
+
+<style>
+  .enquiry { position: relative; }
+  .form-note { font-size: 0.875rem; color: var(--muted); margin-bottom: 1.4rem; }
+  .form-status {
+    margin-bottom: 1.4rem; padding: 14px 16px; border-left: 3px solid var(--error);
+    background: #f6e7e2; color: var(--error); font-weight: 520; font-size: 0.9375rem;
+  }
+  .form-status a { color: inherit; }
+  .reference-note { margin-bottom: 1.4rem; padding: 12px 14px; background: var(--paper-2); font-size: 0.9375rem; }
+  .upload { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; }
+  .upload__input { position: absolute; width: 1px; height: 1px; opacity: 0; overflow: hidden; }
+  .upload__input:focus-visible + .upload__btn { outline: 2px solid var(--focus); outline-offset: 3px; }
+  .upload__btn { gap: 0.6em; }
+  .upload__status { font-size: 0.875rem; color: var(--muted); }
+  .upload__list { list-style: none; padding: 0; margin: 0; font-size: 0.875rem; color: var(--ink-2); display: grid; gap: 2px; }
+  .upload__list:empty { display: none; }
+  .upload__list li { overflow-wrap: anywhere; }
+  .consent-field { margin-top: 1.8rem !important; }
+  .form-actions { margin-top: 2rem; }
+  @media (max-width: 639px) { .btn--block-sm { width: 100%; } }
+  .form-success { padding: clamp(24px, 5vw, 48px); background: var(--paper-2); display: grid; gap: 12px; outline: none; }
+  .form-success[hidden] { display: none; }
+  .field.choices + .field, .field + .field.choices, .field-row + .field.choices, .field.choices + .field-row { margin-top: 1.6rem; }
+</style>

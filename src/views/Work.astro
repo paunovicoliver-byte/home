@@ -1,0 +1,80 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import ProductCard from '../components/ProductCard.astro';
+import CtaBand from '../components/CtaBand.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { pages } from '../i18n/copy/pages';
+import { home } from '../i18n/copy/home';
+import { t } from '../i18n/ui';
+import { path } from '../i18n/routes';
+import { getProducts, entryLocales, productPath, type PageEntry } from '../lib/pages';
+import { webPage } from '../lib/schema';
+import { originOf, trail } from '../lib/seo';
+
+interface Props { page: Extract<PageEntry, { kind: 'static' }> }
+const { page } = Astro.props;
+const { locale } = page;
+const c = pages[locale].work;
+const tt = t(locale);
+const origin = originOf(Astro.site);
+const bc = trail(origin, locale, [{ name: tt.nav.work, href: page.path }]);
+const products = (await getProducts()).filter((p) => entryLocales(p.data).includes(locale));
+const order = ['windows', 'heritage', 'tables', 'doors', 'custom'] as const;
+const groups = order.map((cat) => ({ cat, items: products.filter((p) => p.data.category === cat) })).filter((g) => g.items.length);
+const itemList = {
+  '@type': 'ItemList',
+  '@id': `${bc.url}#list`,
+  itemListElement: products.map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: new URL(productPath(locale, p), origin).href, name: p.data.i18n[locale]!.name })),
+};
+const schema = [webPage(origin, locale, { url: bc.url, name: c.meta.title, description: c.meta.description, type: 'CollectionPage', breadcrumbId: bc.id, mainEntity: { '@id': `${bc.url}#list` } }), bc.node, itemList];
+const pageEvents = [{
+  event: 'view_item_list',
+  params: { item_list_id: 'collection', items: products.map((p, i) => ({ item_id: p.id, item_name: p.id, item_category: p.data.category, index: i + 1 })) },
+}];
+let n = 0;
+---
+<Base locale={locale} pageType="collection" title={c.meta.title} description={c.meta.description} alternates={page.alternates} schema={schema} currentNav="work" pageEvents={pageEvents}>
+  <Breadcrumbs locale={locale} items={bc.items} />
+  <header class="container page-intro">
+    <span class="eyebrow">{c.eyebrow}</span>
+    <h1 class="h1">{c.title}</h1>
+    <p class="lead">{c.text}</p>
+    <nav class="cat-nav" aria-label={c.categoriesTitle}>
+      <ul>{groups.map((g) => <li><a href={g.cat === 'windows' ? path(locale, 'windows') : `#${g.cat}`}>{tt.categories[g.cat]}</a></li>)}</ul>
+    </nav>
+  </header>
+
+  {groups.map((g) => (
+    <section class="section section--tight cat-section" id={g.cat} aria-labelledby={`h-${g.cat}`}>
+      <div class="container">
+        <div class="cat-head">
+          <h2 class="h2" id={`h-${g.cat}`}>{tt.categories[g.cat]}</h2>
+          <p class="muted">{home[locale].categories.descriptions[g.cat]}</p>
+        </div>
+        <div class="cards-3">{g.items.map((p) => <ProductCard entry={p} locale={locale} index={n++} list="collection" />)}</div>
+      </div>
+    </section>
+  ))}
+
+  <section class="section section--tight">
+    <div class="container">
+      <div class="other">
+        <h2 class="h2">{c.otherTitle}</h2>
+        <p class="lead">{c.otherText}</p>
+        <a class="btn" href={`${path(locale, 'start')}?type=other`} data-track="start_project" data-track-location="collection_other">{tt.cta.tellIdea}<Icon name="arrow" class="arrow" /></a>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand locale={locale} location="collection_closing" />
+</Base>
+<style>
+  .cat-nav ul { list-style: none; padding: 0; margin: 2rem 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .cat-nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border: 1px solid var(--line-strong); text-decoration: none; font-size: 0.875rem; }
+  .cat-nav a:hover { background: var(--ink); color: var(--paper); }
+  .cat-section { border-top: 1px solid var(--line); }
+  .cat-head { display: grid; gap: 8px; margin-bottom: 32px; }
+  @media (min-width: 900px) { .cat-head { grid-template-columns: 1fr 1fr; align-items: end; } }
+  .other { border: 1px solid var(--line-strong); padding: clamp(28px, 6vw, 72px); display: grid; gap: 18px; justify-items: start; }
+</style>

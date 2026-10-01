@@ -1,0 +1,84 @@
+---
+/**
+ * Full-bleed editorial hero. The image is the LCP element: eager, high
+ * fetch priority, never lazy. Optional desktop-only video (see site.heroVideo)
+ * loads after the page and never on mobile, Save-Data or reduced motion.
+ */
+import Img from './Img.astro';
+import type { ImageMetadata } from 'astro';
+import { site } from '../config/site';
+interface Props {
+  image: ImageMetadata;
+  alt: string;
+  eyebrow?: string;
+  title: string;
+  titleTag?: 'h1' | 'p';
+  lines?: string[];
+  size?: 'full' | 'tall';
+  video?: boolean;
+  brand?: boolean;
+}
+const { image, alt, eyebrow, title, lines = [], size = 'tall', video = false, brand = false } = Astro.props;
+const v = video ? site.heroVideo : null;
+---
+<section class:list={['hero', `hero--${size}`]}>
+  <div class="hero__media">
+    <Img src={image} alt={alt} priority sizes="100vw" class="hero__img" />
+    {v && (
+      <video class="hero__video" muted playsinline loop preload="none" aria-hidden="true" data-hero-video data-webm={v.webm} data-mp4={v.mp4}></video>
+    )}
+  </div>
+  <div class="hero__shade" aria-hidden="true"></div>
+  <div class="container hero__content">
+    {brand ? (
+      <>
+        <p class="hero__brand">DRVENO</p>
+        <h1 class="display hero__title">{title}</h1>
+      </>
+    ) : (
+      <>
+        {eyebrow && <span class="eyebrow hero__eyebrow">{eyebrow}</span>}
+        <h1 class="h1 hero__title">{title}</h1>
+      </>
+    )}
+    {lines.length > 0 && <div class="hero__lines">{lines.map((l) => <p>{l}</p>)}</div>}
+    <slot />
+  </div>
+</section>
+{v && (
+  <script>
+    const el = document.querySelector<HTMLVideoElement>('[data-hero-video]');
+    const conn = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection;
+    if (el && matchMedia('(min-width: 1024px) and (prefers-reduced-motion: no-preference)').matches && !conn?.saveData) {
+      addEventListener('load', () => {
+        for (const [type, src] of [['video/webm', el.dataset.webm], ['video/mp4', el.dataset.mp4]] as const) {
+          if (src) el.append(Object.assign(document.createElement('source'), { src, type }));
+        }
+        el.load();
+        el.addEventListener('canplay', () => { el.classList.add('is-ready'); el.play().catch(() => {}); }, { once: true });
+      });
+    }
+  </script>
+)}
+<style>
+  .hero {
+    position: relative; isolation: isolate; color: var(--on-dark);
+    display: flex; align-items: flex-end;
+    margin-top: calc(-1 * var(--header-h));
+    background: #2a211b;
+  }
+  .hero--full { min-height: max(560px, 100svh); }
+  .hero--tall { min-height: max(520px, 78svh); }
+  .hero__media, .hero__shade { position: absolute; inset: 0; z-index: -1; }
+  .hero__media :global(picture), .hero__media :global(img) { width: 100%; height: 100%; object-fit: cover; }
+  .hero__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1.2s; }
+  .hero__video.is-ready { opacity: 1; }
+  .hero__shade { background: linear-gradient(180deg, rgb(20 16 12 / 0.45) 0%, rgb(20 16 12 / 0.05) 35%, rgb(20 16 12 / 0.2) 55%, rgb(20 16 12 / 0.78) 100%); }
+  .hero__content { padding-top: calc(var(--header-h) + 48px); padding-bottom: clamp(40px, 8vw, 96px); }
+  .hero__brand { font-family: var(--sans); font-size: 0.8125rem; letter-spacing: 0.4em; font-weight: 520; margin-bottom: 1.1rem; }
+  .hero__eyebrow { color: var(--on-dark-muted); }
+  .hero__title { max-width: 14ch; }
+  .hero__lines { margin-top: 1.4rem; font-size: var(--step-1); line-height: 1.5; max-width: 34em; color: #ece6da; }
+  .hero :global(.btn-row) { margin-top: 2rem; }
+  .hero :global(.regions) { margin-top: 1.6rem; color: var(--on-dark-muted); }
+</style>

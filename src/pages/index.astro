@@ -1,0 +1,59 @@
+---
+/**
+ * Root "/". Chooses a language without ever trapping the visitor:
+ * 1. a language the visitor picked before (stored), else
+ * 2. the browser language (de / sr / en; hr, bs, cnr → sr), else
+ * 3. English.
+ * No IP-based logic, no blocking. Visible links serve no-JS users and crawlers.
+ */
+import { localeMeta } from '../i18n/config';
+import { path } from '../i18n/routes';
+import { ui } from '../i18n/ui';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DRVENO — Wood, made to live. · Holz, gemacht zum Leben. · Drvo stvoreno da živi.</title>
+    <meta name="robots" content="noindex, follow" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script is:inline>
+      (function () {
+        var supported = ['en', 'de', 'sr'];
+        var pick = null;
+        try { var s = JSON.parse(localStorage.getItem('drveno_lang') || 'null'); if (s && supported.indexOf(s.lang) > -1) pick = s.lang; } catch (e) {}
+        if (!pick) {
+          var m = document.cookie.match(/(?:^|; )drveno_lang=(en|de|sr)/);
+          if (m) pick = m[1];
+        }
+        if (!pick) {
+          var langs = navigator.languages || [navigator.language || ''];
+          for (var i = 0; i < langs.length && !pick; i++) {
+            var l = String(langs[i]).toLowerCase();
+            if (l.indexOf('de') === 0 || l.indexOf('gsw') === 0) pick = 'de';
+            else if (/^(sr|hr|bs|sh|cnr)/.test(l)) pick = 'sr';
+            else if (l.indexOf('en') === 0) pick = 'en';
+          }
+        }
+        location.replace('/' + (pick || 'en') + '/' + location.search + location.hash);
+      })();
+    </script>
+    <style>
+      body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #f4efe6; color: #1c1a17; font-family: Georgia, serif; text-align: center; }
+      ul { list-style: none; padding: 0; display: flex; gap: 24px; justify-content: center; font-family: system-ui, sans-serif; }
+      a { color: inherit; padding: 12px; display: inline-block; }
+      p { letter-spacing: 0.3em; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p>DRVENO</p>
+      <ul>
+        {(['de', 'en', 'sr'] as const).map((l) => (
+          <li><a href={path(l, 'home')} lang={localeMeta[l].htmlLang} hreflang={localeMeta[l].hreflang}>{localeMeta[l].label} — {ui[l].brand.tagline}</a></li>
+        ))}
+      </ul>
+    </main>
+  </body>
+</html>

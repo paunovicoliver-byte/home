@@ -1,0 +1,51 @@
+---
+import { selectorOrder, localeMeta, type Locale } from '../i18n/config';
+import { path } from '../i18n/routes';
+import { t } from '../i18n/ui';
+import type { Alternates } from '../lib/pages';
+
+interface Props { locale: Locale; alternates: Alternates; variant?: 'header' | 'menu' | 'footer'; class?: string }
+const { locale, alternates, variant = 'header', class: cls = '' } = Astro.props;
+const tt = t(locale);
+---
+<nav class:list={['lang', `lang--${variant}`, cls]} aria-label={tt.a11y.chooseLanguage}>
+  <ul class="lang__list">
+    {selectorOrder.map((l, i) => {
+      const href = alternates[l] ?? path(l, 'home');
+      const current = l === locale;
+      return (
+        <li>
+          {i > 0 && <span class="lang__sep" aria-hidden="true">·</span>}
+          <a
+            href={href}
+            lang={localeMeta[l].htmlLang}
+            hreflang={localeMeta[l].hreflang}
+            aria-current={current ? 'true' : undefined}
+            data-lang-switch={l}
+            class="lang__link"
+          >
+            <span aria-hidden="true">{variant === 'menu' ? localeMeta[l].label : localeMeta[l].short}</span>
+            <span class="visually-hidden">{localeMeta[l].label}{current ? ` (${tt.a11y.currentLanguage})` : ''}</span>
+          </a>
+        </li>
+      );
+    })}
+  </ul>
+</nav>
+
+<style>
+  .lang__list { display: flex; align-items: center; list-style: none; margin: 0; padding: 0; }
+  .lang__list li { display: flex; align-items: center; }
+  .lang__sep { opacity: 0.5; padding-inline: 1px; }
+  .lang__link {
+    display: inline-grid; place-items: center;
+    min-width: 36px; min-height: 40px; padding-inline: 4px;
+    font-size: 0.8125rem; font-weight: 520; letter-spacing: 0.08em;
+    text-decoration: none; opacity: 0.72;
+    transition: opacity 0.2s;
+  }
+  .lang__link:hover { opacity: 1; }
+  .lang__link[aria-current='true'] { opacity: 1; text-decoration: underline; text-underline-offset: 6px; }
+  .lang--menu .lang__link { font-size: 1rem; letter-spacing: 0.02em; min-height: 48px; padding-inline: 8px; }
+  .lang--footer .lang__link { color: inherit; }
+</style>

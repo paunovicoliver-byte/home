@@ -1,0 +1,33 @@
+---
+/* A discreet, dismissible suggestion — never an automatic redirect. Text is shown in the suggested language. */
+import { ui } from '../i18n/ui';
+import { locales, localeMeta, type Locale } from '../i18n/config';
+import type { Alternates } from '../lib/pages';
+interface Props { locale: Locale; alternates: Alternates }
+const { locale, alternates } = Astro.props;
+const options = locales.filter((l) => l !== locale && alternates[l]).map((l) => ({
+  lang: l, href: alternates[l]!, htmlLang: localeMeta[l].htmlLang, ...ui[l].langSuggest,
+}));
+---
+{options.length > 0 && (
+  <div class="lang-suggest" data-lang-suggest hidden role="region" aria-live="polite">
+    <script type="application/json" set:html={JSON.stringify(options)} />
+    <p class="lang-suggest__text" data-text></p>
+    <div class="lang-suggest__actions">
+      <a class="btn" data-go data-lang-switch=""></a>
+      <button class="btn btn--ghost" type="button" data-dismiss></button>
+    </div>
+  </div>
+)}
+<style>
+  .lang-suggest {
+    position: fixed; z-index: 45; left: 12px; right: 12px; top: calc(var(--header-h) + 8px);
+    max-width: 440px; margin-left: auto;
+    background: var(--paper); border: 1px solid var(--line-strong); padding: 16px;
+    box-shadow: 0 10px 30px rgb(28 26 23 / 0.12);
+  }
+  .lang-suggest[hidden] { display: none; }
+  .lang-suggest__text { font-size: 0.9375rem; margin-bottom: 12px; }
+  .lang-suggest__actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  .lang-suggest .btn { min-height: 44px; padding: 0.5rem 1rem; font-size: 0.875rem; }
+</style>

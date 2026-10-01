@@ -1,0 +1,71 @@
+---
+import Base from '../layouts/Base.astro';
+import Img from '../components/Img.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import CtaBand from '../components/CtaBand.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { marked } from 'marked';
+import { t, fmt } from '../i18n/ui';
+import { localeMeta } from '../i18n/config';
+import { path } from '../i18n/routes';
+import { getArticles, entryLocales, type PageEntry } from '../lib/pages';
+import { webPage, article as articleNode } from '../lib/schema';
+import { originOf, trail } from '../lib/seo';
+import { getImage } from 'astro:assets';
+
+interface Props { page: Extract<PageEntry, { kind: 'article' }> }
+const { page } = Astro.props;
+const { locale, entry } = page;
+const data = entry.data;
+const d = data.i18n[locale]!;
+const tt = t(locale);
+const origin = originOf(Astro.site);
+const bc = trail(origin, locale, [{ name: tt.nav.journal, href: path(locale, 'journal') }, { name: d.title, href: page.path }]);
+const html = await marked.parse(d.body, { gfm: true });
+const words = d.body.split(/\s+/).length;
+const minutes = Math.max(1, Math.round(words / 200));
+const date = new Intl.DateTimeFormat(localeMeta[locale].intl, { year: 'numeric', month: 'long', day: 'numeric' }).format(data.date);
+const img = new URL((await getImage({ src: data.cover.src, width: 1200, format: 'jpg' })).src, origin).href;
+const schema = [
+  webPage(origin, locale, { url: bc.url, name: d.title, description: d.seoDescription, breadcrumbId: bc.id, mainEntity: { '@id': `${bc.url}#article` }, image: img }),
+  bc.node,
+  articleNode(origin, locale, { url: bc.url, headline: d.title, description: d.seoDescription, image: img, datePublished: data.date, dateModified: data.updated }),
+];
+const more = (await getArticles()).filter((a) => a.id !== entry.id && entryLocales(a.data).includes(locale)).slice(0, 2);
+const pageEvents = [{ event: 'view_article', params: { article_id: entry.id } }];
+---
+<Base locale={locale} pageType="article" title={`${d.title} | DRVENO`} description={d.seoDescription} alternates={page.alternates}
+  schema={schema} currentNav="journal" ogImage={data.cover.src} ogImageAlt={data.cover.alt[locale]} ogType="article" pageEvents={pageEvents}>
+  <Fragment slot="head">
+    <meta property="article:published_time" content={data.date.toISOString()} />
+  </Fragment>
+  <Breadcrumbs locale={locale} items={bc.items} />
+  <article>
+    <header class="container page-intro art-head">
+      <p class="eyebrow">{tt.journal.title}</p>
+      <h1 class="h1">{d.title}</h1>
+      <p class="lead">{d.excerpt}</p>
+      <p class="art-meta"><time datetime={data.date.toISOString().slice(0, 10)}>{date}</time> · {fmt(tt.journal.readingTime, { min: minutes })} · {tt.journal.author}</p>
+    </header>
+    <div class="container">
+      <div class="media media--16x9"><Img src={data.cover.src} alt={data.cover.alt[locale]} ratio={16 / 9} priority sizes="(min-width: 1360px) 1270px, 100vw" /></div>
+    </div>
+    <div class="section">
+      <div class="container"><div class="prose art-body" set:html={html} /></div>
+    </div>
+  </article>
+  {more.length > 0 && (
+    <section class="section section--alt" aria-labelledby="h-more-art">
+      <div class="container">
+        <h2 class="h2" id="h-more-art" style="margin-bottom: 2rem">{tt.journal.title}</h2>
+        <div class="two-col">{more.map((a) => <ArticleCard entry={a} locale={locale} />)}</div>
+      </div>
+    </section>
+  )}
+  <CtaBand locale={locale} location="article_closing" />
+</Base>
+<style>
+  .art-head .h1 { max-width: 20ch; }
+  .art-meta { margin-top: 1.25rem; font-size: 0.875rem; color: var(--muted); }
+  .art-body { margin-inline: auto; font-size: var(--step-1); line-height: 1.7; }
+</style>

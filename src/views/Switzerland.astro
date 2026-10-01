@@ -1,0 +1,75 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import Icon from '../components/Icon.astro';
+import SectionHead from '../components/SectionHead.astro';
+import EnquiryForm from '../components/EnquiryForm.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { switzerland } from '../i18n/copy/switzerland';
+import { t } from '../i18n/ui';
+import type { PageEntry } from '../lib/pages';
+import { webPage, service } from '../lib/schema';
+import { originOf, trail } from '../lib/seo';
+import { site } from '../config/site';
+import heroImg from '../assets/images/switzerland.jpg';
+
+interface Props { page: Extract<PageEntry, { kind: 'static' }> }
+const { page } = Astro.props;
+const { locale } = page;
+const c = switzerland[locale];
+const tt = t(locale);
+const origin = originOf(Astro.site);
+const bc = trail(origin, locale, [{ name: tt.nav.switzerland, href: page.path }]);
+const svc = service(origin, locale, { url: bc.url, name: c.form.title, description: c.meta.description, serviceType: c.services.title });
+svc.areaServed = { '@type': 'Country', name: 'CH' };
+const schema = [webPage(origin, locale, { url: bc.url, name: c.meta.title, description: c.meta.description, breadcrumbId: bc.id, mainEntity: { '@id': `${bc.url}#service` } }), bc.node, svc];
+---
+<Base locale={locale} pageType="switzerland" title={c.meta.title} description={c.meta.description} alternates={page.alternates}
+  overlayHeader schema={schema} countryContext="CH" ogImage={heroImg} ogImageAlt={c.hero.imageAlt}>
+  <Hero image={heroImg} alt={c.hero.imageAlt} eyebrow={c.hero.eyebrow} title={c.hero.title} lines={[c.hero.text]}>
+    <div class="btn-row">
+      <a class="btn btn--light" href="#consultation" data-track="start_consultation" data-track-location="switzerland_hero">{tt.cta.bookConsultation}<Icon name="arrow" class="arrow" /></a>
+    </div>
+  </Hero>
+  <Breadcrumbs locale={locale} items={bc.items} />
+
+  <section class="section">
+    <div class="container grid-2 grid-2--wide-right">
+      <h2 class="h2 reveal">{c.intro.title}</h2>
+      <div class="prose reveal">{c.intro.text.map((p) => <p class="lead">{p}</p>)}</div>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="h-services">
+    <div class="container">
+      <SectionHead eyebrow={c.services.eyebrow} title={c.services.title} id="h-services" />
+      <ul class="feature-list feature-list--2">
+        {c.services.items.map((it) => <li class="reveal"><h3>{it.title}</h3><p>{it.text}</p></li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-practical" data-track-view="shipping_info_view" data-track-location="switzerland">
+    <div class="container narrow">
+      <h2 class="h2" id="h-practical">{c.practical.title}</h2>
+      <ul class="list-lines" style="margin-top: 1.5rem">{c.practical.items.map((x) => <li>{x}</li>)}</ul>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="consultation" aria-labelledby="h-consult">
+    <div class="container grid-2 grid-2--start">
+      <div>
+        <SectionHead eyebrow={c.form.eyebrow} title={c.form.title} lead={c.form.text} id="h-consult" />
+        <ul class="direct">
+          <li><a href={`tel:${site.contact.switzerland.phoneHref}`}><Icon name="phone" />{site.contact.switzerland.phone}</a></li>
+          <li><a href={`mailto:${site.contact.email}`}><Icon name="mail" />{site.contact.email}</a></li>
+        </ul>
+      </div>
+      <EnquiryForm locale={locale} kind="consultation" />
+    </div>
+  </section>
+</Base>
+<style>
+  .direct { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
+  .direct a { display: inline-flex; gap: 12px; align-items: center; padding-block: 10px; font-size: 1.0625rem; overflow-wrap: anywhere; }
+</style>

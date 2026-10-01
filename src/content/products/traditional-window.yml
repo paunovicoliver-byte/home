@@ -1,0 +1,93 @@
+category: windows
+projectType: windows
+order: 2
+featured: false
+woods: [oak, larch]
+customizable: true
+cover:
+  src: ../../assets/images/window-traditional.jpg
+  alt:
+    en: Traditional two-leaf wooden window with glazing bars and a deep sill
+    de: Traditionelles zweiflügliges Holzfenster mit Sprossen und tiefer Fensterbank
+    sr: Tradicionalni dvokrilni drveni prozor sa prečkama i dubokom klupicom
+gallery:
+  - src: ../../assets/images/window-arched.jpg
+    alt:
+      en: Arched wooden window in walnut-toned timber
+      de: Holzfenster mit Rundbogen in dunklem Holzton
+      sr: Drveni prozor sa lukom u tamnom tonu drveta
+  - src: ../../assets/images/end-grain.jpg
+    alt:
+      en: End grain of a log showing its growth rings
+      de: Stirnholz eines Stammes mit Jahrringen
+      sr: Poprečni presek stabla sa godovima
+i18n:
+  en:
+    slug: traditional-wooden-window
+    name: Traditional Window
+    summary: Divided panes, slender bars and quiet profiles — a window in the language of older houses, made for homes that want to keep it.
+    story:
+      - Traditional windows were designed by people who understood how wood behaves. Their proportions, glazing bars and profiles were not decoration; they were the result of careful construction.
+      - We build traditional windows for new and existing houses where that character matters — with the same attention to proportion, and with the details agreed together.
+    wood: Oak or larch, selected for straight grain and stability.
+    dimensions: Made to measure; divisions and bar widths drawn for your façade.
+    finish: Oil, oil-based wax or paint in a colour agreed with you.
+    specs:
+      - label: Construction
+        value: Solid timber with glazing bars and traditional profiles
+      - label: Divisions
+        value: Drawn to the proportions of your façade
+      - label: Glazing
+        value: Specified per project
+    care:
+      - Dust bars and profiles with a soft brush.
+      - Inspect the finish every spring, especially the lower rail and sill.
+      - Re-oil or touch up paint early; small interventions keep the wood healthy.
+    seoTitle: Traditional wooden windows with glazing bars
+    seoDescription: Traditional wooden windows with divided panes and slender profiles, handmade in Serbia and delivered to Switzerland and across Europe.
+  de:
+    slug: traditionelles-holzfenster
+    name: Traditionelles Fenster
+    summary: Geteilte Scheiben, schlanke Sprossen und ruhige Profile — ein Fenster in der Sprache älterer Häuser, für Häuser, die diese Sprache behalten möchten.
+    story:
+      - Traditionelle Fenster wurden von Menschen entworfen, die wussten, wie Holz sich verhält. Proportionen, Sprossen und Profile waren keine Dekoration, sondern das Ergebnis sorgfältiger Konstruktion.
+      - Wir bauen traditionelle Fenster für neue und bestehende Häuser, in denen dieser Charakter zählt — mit derselben Sorgfalt bei den Proportionen und mit Details, die wir gemeinsam festlegen.
+    wood: Eiche oder Lärche, ausgewählt nach geradem Wuchs und Formstabilität.
+    dimensions: Nach Mass; Teilung und Sprossenbreite auf Ihre Fassade abgestimmt.
+    finish: Öl, Ölwachs oder Farbe im gemeinsam gewählten Farbton.
+    specs:
+      - label: Konstruktion
+        value: Massivholz mit Sprossen und traditionellen Profilen
+      - label: Teilung
+        value: Nach den Proportionen Ihrer Fassade gezeichnet
+      - label: Verglasung
+        value: Projektbezogen festgelegt
+    care:
+      - Sprossen und Profile mit einem weichen Pinsel abstauben.
+      - Die Oberfläche jeden Frühling prüfen, besonders unteres Rahmenholz und Fensterbank.
+      - Frühzeitig nachölen oder ausbessern; kleine Eingriffe halten das Holz gesund.
+    seoTitle: Traditionelle Holzfenster mit Sprossen
+    seoDescription: Traditionelle Holzfenster mit Sprossenteilung und schlanken Profilen, in Serbien von Hand gefertigt und in die Schweiz sowie ganz Europa geliefert.
+  sr:
+    slug: tradicionalni-drveni-prozor
+    name: Tradicionalni prozor
+    summary: Podeljena stakla, tanke prečke i mirni profili — prozor na jeziku starih kuća, za domove koji žele da ga sačuvaju.
+    story:
+      - Tradicionalne prozore osmišljavali su ljudi koji su razumeli kako se drvo ponaša. Proporcije, prečke i profili nisu bili ukras, već rezultat promišljene konstrukcije.
+      - Tradicionalne prozore pravimo za nove i postojeće kuće u kojima je taj karakter važan — sa istom pažnjom prema proporcijama i sa detaljima koje dogovaramo zajedno.
+    wood: Hrast ili ariš, birani zbog prave žice i stabilnosti.
+    dimensions: Po meri; podela i širina prečki crtaju se prema vašoj fasadi.
+    finish: Ulje, uljani vosak ili boja u tonu koji zajedno izaberemo.
+    specs:
+      - label: Konstrukcija
+        value: Masivno drvo sa prečkama i tradicionalnim profilima
+      - label: Podela
+        value: Prema proporcijama vaše fasade
+      - label: Zastakljivanje
+        value: Određuje se za svaki projekat
+    care:
+      - Prečke i profile brišite mekom četkicom.
+      - Svakog proleća proverite površinu, naročito donji deo okvira i klupicu.
+      - Na vreme nauljite ili popravite boju; mali zahvati čuvaju drvo zdravim.
+    seoTitle: Tradicionalni drveni prozori sa prečkama
+    seoDescription: Tradicionalni drveni prozori sa podeljenim staklima i tankim profilima, ručno izrađeni u Srbiji, sa isporukom u Švajcarsku i širom Evrope.

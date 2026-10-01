@@ -1,0 +1,28 @@
+---
+import Img from './Img.astro';
+import type { CollectionEntry } from 'astro:content';
+import { localeMeta, type Locale } from '../i18n/config';
+import { articlePath } from '../lib/pages';
+interface Props { entry: CollectionEntry<'journal'>; locale: Locale }
+const { entry, locale } = Astro.props;
+const d = entry.data.i18n[locale]!;
+const date = new Intl.DateTimeFormat(localeMeta[locale].intl, { year: 'numeric', month: 'long', day: 'numeric' }).format(entry.data.date);
+---
+<article class="acard reveal">
+  <a href={articlePath(locale, entry)} class="acard__link">
+    <div class="media media--3x2 zoom"><Img src={entry.data.cover.src} alt={entry.data.cover.alt[locale]} ratio={3 / 2} sizes="(min-width: 1100px) 30vw, (min-width: 640px) 45vw, 92vw" /></div>
+    <div class="acard__body">
+      <p class="acard__meta"><time datetime={entry.data.date.toISOString().slice(0, 10)}>{date}</time></p>
+      <h3 class="acard__title">{d.title}</h3>
+      <p class="acard__text">{d.excerpt}</p>
+    </div>
+  </a>
+</article>
+<style>
+  .acard__link { display: block; text-decoration: none; }
+  .acard__body { padding-top: 16px; display: grid; gap: 6px; }
+  .acard__meta { font-size: 0.8125rem; color: var(--muted); }
+  .acard__title { font-size: var(--step-2); line-height: 1.12; }
+  .acard__link:hover .acard__title { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+  .acard__text { color: var(--ink-2); font-size: 0.9375rem; }
+</style>

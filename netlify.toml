@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Netlify Forms are detected automatically from the static HTML
+# (forms named "quote", "consultation" and "contact").
+# Configure notification emails in the Netlify UI: Forms → Form notifications.

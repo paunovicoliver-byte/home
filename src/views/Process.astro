@@ -1,0 +1,63 @@
+---
+import Base from '../layouts/Base.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
+import CtaBand from '../components/CtaBand.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { process } from '../i18n/copy/process';
+import { t } from '../i18n/ui';
+import type { PageEntry } from '../lib/pages';
+import { webPage } from '../lib/schema';
+import { originOf, trail } from '../lib/seo';
+
+interface Props { page: Extract<PageEntry, { kind: 'static' }> }
+const { page } = Astro.props;
+const { locale } = page;
+const c = process[locale];
+const tt = t(locale);
+const origin = originOf(Astro.site);
+const bc = trail(origin, locale, [{ name: tt.nav.process, href: page.path }]);
+const howTo = {
+  '@type': 'HowTo',
+  '@id': `${bc.url}#howto`,
+  name: c.hero.title,
+  description: c.meta.description,
+  inLanguage: { en: 'en', de: 'de-CH', sr: 'sr-RS' }[locale],
+  step: c.steps.map((s, i) => ({ '@type': 'HowToStep', position: i + 1, name: s.title, text: s.text })),
+};
+const schema = [webPage(origin, locale, { url: bc.url, name: c.meta.title, description: c.meta.description, breadcrumbId: bc.id }), bc.node, howTo];
+---
+<Base locale={locale} pageType="process" title={c.meta.title} description={c.meta.description} alternates={page.alternates} schema={schema} currentNav="process">
+  <Breadcrumbs locale={locale} items={bc.items} />
+  <header class="container page-intro">
+    <span class="eyebrow">{c.hero.eyebrow}</span>
+    <h1 class="h1" style="max-width: 16ch">{c.hero.title}</h1>
+    <p class="lead">{c.hero.text}</p>
+  </header>
+
+  <section class="section section--tight" aria-label={c.hero.eyebrow}>
+    <div class="container"><ProcessSteps locale={locale} detailed /></div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="h-timing" data-track-view="shipping_info_view" data-track-location="process_timing">
+    <div class="container">
+      <h2 class="h2" id="h-timing">{c.timing.title}</h2>
+      <dl class="timing">
+        {[c.timing.production, c.timing.delivery].map((x) => (
+          <div><dt>{x.label}</dt><dd><span class="timing__v">{x.value}</span><span class="timing__n">{x.note}</span></dd></div>
+        ))}
+      </dl>
+      <p class="muted" style="max-width: 40em">{c.timing.note}</p>
+    </div>
+  </section>
+
+  <CtaBand locale={locale} location="process_closing" />
+</Base>
+<style>
+  .timing { display: grid; gap: 24px; margin: 2rem 0; }
+  @media (min-width: 720px) { .timing { grid-template-columns: 1fr 1fr; } }
+  .timing > div { border-top: 1px solid var(--line-strong); padding-top: 18px; }
+  .timing dt { font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); font-weight: 560; }
+  .timing dd { margin: 8px 0 0; display: grid; gap: 4px; }
+  .timing__v { font-family: var(--serif); font-size: var(--step-3); line-height: 1.05; }
+  .timing__n { color: var(--ink-2); }
+</style>

@@ -1,0 +1,65 @@
+---
+import Img from './Img.astro';
+import Icon from './Icon.astro';
+import { t } from '../i18n/ui';
+import { path } from '../i18n/routes';
+import type { Locale } from '../i18n/config';
+import { home } from '../i18n/copy/home';
+import windowsImg from '../assets/images/windows-hero.jpg';
+import heritageImg from '../assets/images/window-arched.jpg';
+import tablesImg from '../assets/images/table-oak.jpg';
+import doorsImg from '../assets/images/door.jpg';
+import customImg from '../assets/images/bench.jpg';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const tt = t(locale);
+const c = home[locale].categories;
+const work = path(locale, 'work');
+const cats = [
+  { key: 'windows', img: windowsImg, href: path(locale, 'windows'), feature: true },
+  { key: 'heritage', img: heritageImg, href: path(locale, 'heritage') },
+  { key: 'tables', img: tablesImg, href: `${work}#tables` },
+  { key: 'doors', img: doorsImg, href: `${work}#doors` },
+  { key: 'custom', img: customImg, href: `${work}#custom` },
+] as const;
+---
+<ul class="cats">
+  {cats.map((cat) => (
+    <li class:list={['cats__item reveal', { 'cats__item--feature': 'feature' in cat }]}>
+      <a href={cat.href} class="cats__link" data-track="select_category" data-track-category={cat.key}>
+        <div class="media zoom cats__media">
+          <Img src={cat.img} alt="" ratio={'feature' in cat ? 4 / 5 : 4 / 5} sizes={'feature' in cat ? '(min-width: 900px) 50vw, 92vw' : '(min-width: 900px) 25vw, 46vw'} />
+        </div>
+        <h3 class="cats__title">{tt.categories[cat.key]}</h3>
+        <p class="cats__text">{c.descriptions[cat.key]}</p>
+      </a>
+    </li>
+  ))}
+  <li class="cats__item cats__other reveal">
+    <div class="cats__other-inner">
+      <h3 class="h3">{c.other.title}</h3>
+      <p>{c.other.text}</p>
+      <a class="link-arrow" href={`${path(locale, 'start')}?type=other`} data-track="start_project" data-track-location="categories_other">{tt.cta.tellIdea}<Icon name="arrow" class="arrow" /></a>
+    </div>
+  </li>
+</ul>
+<style>
+  .cats { list-style: none; margin: 0; padding: 0; display: grid; gap: 32px 16px; grid-template-columns: 1fr 1fr; }
+  .cats__item--feature { grid-column: 1 / -1; }
+  .cats__other { grid-column: 1 / -1; }
+  @media (min-width: 900px) {
+    .cats { grid-template-columns: repeat(4, 1fr); gap: 48px 24px; }
+    .cats__item--feature { grid-column: span 2; grid-row: span 2; }
+    .cats__other { grid-column: span 2; }
+  }
+  .cats__link { display: block; text-decoration: none; }
+  .cats__item--feature .cats__media { aspect-ratio: 4 / 5; }
+  .cats__media { aspect-ratio: 4 / 5; }
+  .cats__title { font-size: var(--step-2); margin-top: 14px; line-height: 1.1; }
+  .cats__item--feature .cats__title { font-size: var(--step-3); }
+  .cats__link:hover .cats__title { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+  .cats__text { color: var(--ink-2); font-size: 0.9375rem; margin-top: 6px; }
+  .cats__other-inner { height: 100%; border: 1px solid var(--line-strong); padding: clamp(24px, 4vw, 40px); display: grid; gap: 14px; align-content: center; }
+  .cats__other-inner .link-arrow { justify-self: start; }
+</style>

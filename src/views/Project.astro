@@ -1,0 +1,122 @@
+---
+import Base from '../layouts/Base.astro';
+import Img from '../components/Img.astro';
+import Icon from '../components/Icon.astro';
+import Gallery from '../components/Gallery.astro';
+import BeforeAfter from '../components/BeforeAfter.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import CtaBand from '../components/CtaBand.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { t } from '../i18n/ui';
+import { path } from '../i18n/routes';
+import { getProjects, entryLocales, type PageEntry } from '../lib/pages';
+import { webPage, creativeWork } from '../lib/schema';
+import { originOf, trail } from '../lib/seo';
+import { getImage } from 'astro:assets';
+
+interface Props { page: Extract<PageEntry, { kind: 'project' }> }
+const { page } = Astro.props;
+const { locale, entry } = page;
+const data = entry.data;
+const d = data.i18n[locale]!;
+const tt = t(locale);
+const p = tt.project;
+const origin = originOf(Astro.site);
+const bc = trail(origin, locale, [{ name: tt.nav.projects, href: path(locale, 'projects') }, { name: d.title, href: page.path }]);
+const ogi = new URL((await getImage({ src: data.cover.src, width: 1200, format: 'jpg' })).src, origin).href;
+const schema = [
+  webPage(origin, locale, { url: bc.url, name: d.title, description: d.seoDescription, breadcrumbId: bc.id, mainEntity: { '@id': `${bc.url}#project` }, image: ogi }),
+  bc.node,
+  creativeWork(origin, locale, { url: bc.url, name: d.title, description: d.summary, image: ogi, dateCreated: data.year, locationName: d.location }),
+];
+const more = (await getProjects()).filter((x) => x.id !== entry.id && entryLocales(x.data).includes(locale)).slice(0, 2);
+const typeForForm = data.filters.includes('heritage') ? 'restoration' : data.filters.includes('windows') ? 'windows' : data.filters.includes('tables') ? 'table' : data.filters.includes('doors') ? 'door' : 'other';
+const pageEvents = [{ event: 'view_project', params: { project_id: entry.id, project_categories: data.filters } }];
+---
+<Base locale={locale} pageType="project" title={`${d.title} | DRVENO`} description={d.seoDescription} alternates={page.alternates}
+  schema={schema} currentNav="projects" ogImage={data.cover.src} ogImageAlt={data.cover.alt[locale]} ogType="article" pageEvents={pageEvents}>
+  <Breadcrumbs locale={locale} items={bc.items} />
+  <article>
+    <header class="container page-intro project-head">
+      <p class="eyebrow">{d.type}</p>
+      <h1 class="h1">{d.title}</h1>
+      <p class="lead">{d.summary}</p>
+    </header>
+    <div class="container">
+      <div class="media media--16x9 project-hero"><Img src={data.cover.src} alt={data.cover.alt[locale]} ratio={16 / 9} priority sizes="(min-width: 1360px) 1270px, 100vw" /></div>
+    </div>
+
+    <section class="section">
+      <div class="container project-body">
+        <dl class="facts-dl">
+          {d.location && <div><dt>{p.location}</dt><dd>{d.location}</dd></div>}
+          {data.year && <div><dt>{p.year}</dt><dd>{data.year}</dd></div>}
+          <div><dt>{p.type}</dt><dd>{d.type}</dd></div>
+          {d.materials.length > 0 && <div><dt>{p.materials}</dt><dd><ul>{d.materials.map((m) => <li>{m}</li>)}</ul></dd></div>}
+        </dl>
+        <div class="prose">
+          <h2 class="h3">{p.story}</h2>
+          {d.story.map((s) => <p class="lead">{s}</p>)}
+          {d.challenge.length > 0 && <><h2 class="h3">{p.challenge}</h2>{d.challenge.map((s) => <p>{s}</p>)}</>}
+          {d.approach.length > 0 && <><h2 class="h3">{p.approach}</h2>{d.approach.map((s) => <p>{s}</p>)}</>}
+          {d.quote && (
+            <figure class="pquote">
+              <blockquote><p>{d.quote.text}</p></blockquote>
+              <figcaption>— {d.quote.author}</figcaption>
+            </figure>
+          )}
+        </div>
+      </div>
+    </section>
+
+    {data.beforeAfter && (
+      <section class="section section--alt" aria-labelledby="h-ba">
+        <div class="container narrow-wide">
+          <h2 class="h2" id="h-ba" style="margin-bottom: 1.5rem">{p.beforeAfter}</h2>
+          <BeforeAfter locale={locale} id={`project_${entry.id}`}
+            before={{ src: data.beforeAfter.before.src, alt: data.beforeAfter.before.alt[locale] }}
+            after={{ src: data.beforeAfter.after.src, alt: data.beforeAfter.after.alt[locale] }} />
+        </div>
+      </section>
+    )}
+
+    {data.gallery.length > 0 && (
+      <section class="section" aria-labelledby="h-pgallery">
+        <div class="container">
+          <h2 class="h2" id="h-pgallery" style="margin-bottom: 1.5rem">{p.gallery}</h2>
+          <Gallery locale={locale} id={`project_${entry.id}`} images={data.gallery.map((g) => ({ src: g.src, alt: g.alt[locale] }))} label={`${p.gallery}: ${d.title}`} />
+        </div>
+      </section>
+    )}
+  </article>
+
+  {more.length > 0 && (
+    <section class="section section--alt" aria-labelledby="h-more">
+      <div class="container">
+        <div class="more-head">
+          <h2 class="h2" id="h-more">{p.more}</h2>
+          <a class="link-arrow" href={path(locale, 'projects')}>{tt.cta.allProjects}<Icon name="arrow" class="arrow" /></a>
+        </div>
+        <div class="two-col">{more.map((m) => <ProjectCard entry={m} locale={locale} />)}</div>
+      </div>
+    </section>
+  )}
+  <CtaBand locale={locale} projectType={typeForForm} location="project_closing" />
+</Base>
+<style>
+  .project-head .h1 { max-width: 18ch; }
+  .project-body { display: grid; gap: 40px; }
+  @media (min-width: 960px) { .project-body { grid-template-columns: 1fr 2fr; gap: 80px; } }
+  .project-body .prose h2 { margin-top: 1.8em; }
+  .project-body .prose h2:first-child { margin-top: 0; }
+  .facts-dl { margin: 0; border-top: 1px solid var(--line-strong); align-self: start; }
+  .facts-dl > div { padding-block: 14px; border-bottom: 1px solid var(--line); display: grid; gap: 4px; }
+  .facts-dl dt { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 560; }
+  .facts-dl dd { margin: 0; }
+  .facts-dl ul { list-style: none; padding: 0; margin: 0; }
+  .pquote { margin-top: 2rem; padding-left: 20px; border-left: 2px solid var(--oak); }
+  .pquote blockquote { margin: 0; font-family: var(--serif); font-style: italic; font-size: var(--step-2); }
+  .pquote figcaption { margin-top: 8px; color: var(--muted); }
+  .narrow-wide { max-width: 1100px; }
+  .more-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 12px; margin-bottom: 32px; }
+</style>
