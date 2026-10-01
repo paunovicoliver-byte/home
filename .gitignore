@@ -8,3 +8,4 @@ dist/
 *.log
 scripts/.shot.mjs
 scripts/.lcp.mjs
+screenshots/
