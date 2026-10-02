@@ -1,10 +1,7 @@
+# Plain static site: no build step. Netlify serves the repository root as-is.
 [build]
-  command = "npm run build"
-  publish = "dist"
+  publish = "."
+  command = ""
 
-[build.environment]
-  NODE_VERSION = "22"
-
-# Netlify Forms are detected automatically from the static HTML
-# (forms named "quote", "consultation" and "contact").
-# Configure notification emails in the Netlify UI: Forms → Form notifications.
+# Forms ("quote", "consultation", "contact") are detected automatically from the HTML.
+# Set notification emails in the Netlify UI: Forms → Form notifications.

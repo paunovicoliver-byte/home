@@ -1,12 +1,3 @@
-node_modules/
-dist/
-.astro/
-.env
-.env.*
-!.env.example
 .DS_Store
-*.log
-scripts/.shot.mjs
-scripts/.lcp.mjs
+Thumbs.db
 screenshots/
-scripts/.live.mjs
