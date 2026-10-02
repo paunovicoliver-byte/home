@@ -79,7 +79,7 @@ Every page exists three times, once per language. Text changes need to be made i
 
 ## History
 
-Until tag `astro-source-final`, this site was generated with the Astro framework, with all translations in one place, automatic image resizing, a content editor and automated tests. If you ever want those conveniences back, that version can be restored from that tag. The pages here are exactly what it produced.
+Up to commit `867b73a` ("Support browsing the site from disk"), this site was generated with the Astro framework, with all translations in one place, automatic image resizing, a content editor and automated tests. If you ever want those conveniences back, that version can be restored from that commit. The pages here are exactly what it produced.
 
 ## Before launch
 
