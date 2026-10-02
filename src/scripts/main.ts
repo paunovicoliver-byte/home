@@ -2,6 +2,9 @@ import { initAnalytics } from './analytics';
 import { initConsent } from './consent';
 import { initLang } from './lang';
 import { initUi } from './ui';
+import { fixLocalLinks } from './local-links';
+
+fixLocalLinks();
 
 initAnalytics();
 initUi();

@@ -36,7 +36,8 @@ import { ui } from '../i18n/ui';
             else if (l.indexOf('en') === 0) pick = 'en';
           }
         }
-        location.replace('/' + (pick || 'en') + '/' + location.search + location.hash);
+        // Relative, so it works on any host path and when opened from disk.
+        location.replace((pick || 'en') + '/' + (location.protocol === 'file:' ? 'index.html' : '') + location.search + location.hash);
       })();
     </script>
     <style>

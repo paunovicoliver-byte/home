@@ -1,5 +1,6 @@
 import { track, ctx } from './analytics';
 import { locales } from '../i18n/config';
+import { localHref } from './local-links';
 
 const PREF_KEY = 'drveno_lang';
 const DISMISS_KEY = 'drveno_lang_suggest';
@@ -61,7 +62,7 @@ export function initLang() {
   box.querySelector<HTMLElement>('[data-text]')!.textContent = o.text;
   const go = box.querySelector<HTMLAnchorElement>('[data-go]')!;
   go.textContent = o.action;
-  go.href = o.href;
+  go.setAttribute('href', localHref(o.href));
   go.dataset.langSwitch = o.lang;
   const dismiss = box.querySelector<HTMLButtonElement>('[data-dismiss]')!;
   dismiss.textContent = o.dismiss;
