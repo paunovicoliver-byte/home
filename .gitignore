@@ -9,3 +9,4 @@ dist/
 scripts/.shot.mjs
 scripts/.lcp.mjs
 screenshots/
+scripts/.live.mjs
