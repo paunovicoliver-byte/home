@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.drveno.com/en/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/en/work/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/work/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/arbeiten/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/radovi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/work/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/arbeiten/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/work/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/arbeiten/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/radovi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/work/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/radovi/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/work/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/arbeiten/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/radovi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/work/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/en/windows/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/windows/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/fenster/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/prozori/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/windows/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/fenster/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/windows/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/fenster/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/prozori/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/windows/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/prozori/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/windows/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/fenster/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/prozori/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/windows/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/en/heritage-restoration/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/heritage-restoration/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/denkmalpflege-restaurierung/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/nasledje-restauracija/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/heritage-restoration/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/denkmalpflege-restaurierung/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/heritage-restoration/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/denkmalpflege-restaurierung/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/nasledje-restauracija/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/heritage-restoration/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/nasledje-restauracija/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/heritage-restoration/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/denkmalpflege-restaurierung/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/nasledje-restauracija/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/heritage-restoration/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/en/our-story/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/our-story/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/unsere-geschichte/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/nasa-prica/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/our-story/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/unsere-geschichte/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/our-story/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/unsere-geschichte/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/nasa-prica/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/our-story/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/nasa-prica/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/our-story/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/unsere-geschichte/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/nasa-prica/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/our-story/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/en/how-we-work/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/how-we-work/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/so-arbeiten-wir/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/kako-radimo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/how-we-work/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/so-arbeiten-wir/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/how-we-work/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/so-arbeiten-wir/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/kako-radimo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/how-we-work/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/kako-radimo/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/how-we-work/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/so-arbeiten-wir/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/kako-radimo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/how-we-work/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/en/switzerland/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/switzerland/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/schweiz/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/svajcarska/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/switzerland/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/schweiz/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/switzerland/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/schweiz/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/svajcarska/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/switzerland/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/svajcarska/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/switzerland/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/schweiz/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/svajcarska/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/switzerland/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/en/projects/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/projects/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/projekte/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/projekti/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/projects/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/projekte/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/projects/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/projekte/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/projekti/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/projects/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/projekti/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/projects/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/projekte/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/projekti/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/projects/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/en/journal/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/journal/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/journal/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/iz-radionice/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/journal/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/journal/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/journal/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/journal/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/iz-radionice/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/journal/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/iz-radionice/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/journal/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/journal/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/iz-radionice/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/journal/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/en/start-a-project/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/start-a-project/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/projekt-starten/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/pokrenite-projekat/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/start-a-project/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/projekt-starten/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/start-a-project/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/projekt-starten/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/pokrenite-projekat/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/start-a-project/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/pokrenite-projekat/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/start-a-project/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/projekt-starten/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/pokrenite-projekat/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/start-a-project/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/en/contact/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/kontakt/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/kontakt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/contact/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/kontakt/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/kontakt/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/kontakt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/contact/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/kontakt/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/kontakt/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/kontakt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/contact/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/en/privacy/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/datenschutz/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/privatnost/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/privacy/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/datenschutz/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/datenschutz/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/privatnost/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/privacy/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/privatnost/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/datenschutz/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/privatnost/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/privacy/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/en/imprint/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/imprint/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/impressum/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/impresum/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/imprint/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/impressum/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/imprint/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/impressum/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/impresum/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/imprint/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/impresum/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/imprint/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/impressum/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/impresum/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/imprint/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/en/work/handmade-wooden-window/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/work/handmade-wooden-window/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/arbeiten/holzfenster-nach-mass/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/radovi/drveni-prozor-po-meri/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/work/handmade-wooden-window/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/arbeiten/holzfenster-nach-mass/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/work/handmade-wooden-window/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/arbeiten/holzfenster-nach-mass/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/radovi/drveni-prozor-po-meri/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/work/handmade-wooden-window/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/radovi/drveni-prozor-po-meri/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/work/handmade-wooden-window/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/arbeiten/holzfenster-nach-mass/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/radovi/drveni-prozor-po-meri/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/work/handmade-wooden-window/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/en/work/traditional-wooden-window/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/work/traditional-wooden-window/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/arbeiten/traditionelles-holzfenster/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/radovi/tradicionalni-drveni-prozor/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/work/traditional-wooden-window/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/arbeiten/traditionelles-holzfenster/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/work/traditional-wooden-window/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/arbeiten/traditionelles-holzfenster/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/radovi/tradicionalni-drveni-prozor/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/work/traditional-wooden-window/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/radovi/tradicionalni-drveni-prozor/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/work/traditional-wooden-window/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/arbeiten/traditionelles-holzfenster/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/radovi/tradicionalni-drveni-prozor/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/work/traditional-wooden-window/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/en/work/heritage-window-reproduction/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/work/heritage-window-reproduction/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/arbeiten/historische-fenster-nachbau/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/radovi/rekonstrukcija-istorijskih-prozora/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/work/heritage-window-reproduction/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/arbeiten/historische-fenster-nachbau/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/work/heritage-window-reproduction/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/arbeiten/historische-fenster-nachbau/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/radovi/rekonstrukcija-istorijskih-prozora/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/work/heritage-window-reproduction/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/radovi/rekonstrukcija-istorijskih-prozora/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/work/heritage-window-reproduction/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/arbeiten/historische-fenster-nachbau/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/radovi/rekonstrukcija-istorijskih-prozora/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/work/heritage-window-reproduction/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/en/work/solid-oak-dining-table/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/work/solid-oak-dining-table/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/arbeiten/esstisch-massive-eiche/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/radovi/trpezarijski-sto-od-masivnog-hrasta/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/work/solid-oak-dining-table/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/arbeiten/esstisch-massive-eiche/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/work/solid-oak-dining-table/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/arbeiten/esstisch-massive-eiche/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/radovi/trpezarijski-sto-od-masivnog-hrasta/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/work/solid-oak-dining-table/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/radovi/trpezarijski-sto-od-masivnog-hrasta/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/work/solid-oak-dining-table/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/arbeiten/esstisch-massive-eiche/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/radovi/trpezarijski-sto-od-masivnog-hrasta/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/work/solid-oak-dining-table/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/en/work/farmhouse-table/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/work/farmhouse-table/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/arbeiten/bauerntisch/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/radovi/seoski-sto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/work/farmhouse-table/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/arbeiten/bauerntisch/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/work/farmhouse-table/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/arbeiten/bauerntisch/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/radovi/seoski-sto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/work/farmhouse-table/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/radovi/seoski-sto/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/work/farmhouse-table/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/arbeiten/bauerntisch/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/radovi/seoski-sto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/work/farmhouse-table/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/en/work/minimal-oak-table/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/work/minimal-oak-table/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/arbeiten/schlichter-eichentisch/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/radovi/jednostavan-hrastov-sto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/work/minimal-oak-table/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/arbeiten/schlichter-eichentisch/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/work/minimal-oak-table/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/arbeiten/schlichter-eichentisch/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/radovi/jednostavan-hrastov-sto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/work/minimal-oak-table/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/radovi/jednostavan-hrastov-sto/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/work/minimal-oak-table/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/arbeiten/schlichter-eichentisch/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/radovi/jednostavan-hrastov-sto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/work/minimal-oak-table/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/en/work/wooden-bench/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/work/wooden-bench/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/arbeiten/holzbank/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/radovi/drvena-klupa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/work/wooden-bench/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/arbeiten/holzbank/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/work/wooden-bench/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/arbeiten/holzbank/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/radovi/drvena-klupa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/work/wooden-bench/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/radovi/drvena-klupa/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/work/wooden-bench/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/arbeiten/holzbank/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/radovi/drvena-klupa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/work/wooden-bench/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/en/work/custom-wooden-door/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/work/custom-wooden-door/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/arbeiten/holztuer-nach-mass/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/radovi/drvena-vrata-po-meri/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/work/custom-wooden-door/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/arbeiten/holztuer-nach-mass/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/work/custom-wooden-door/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/arbeiten/holztuer-nach-mass/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/radovi/drvena-vrata-po-meri/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/work/custom-wooden-door/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/radovi/drvena-vrata-po-meri/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/work/custom-wooden-door/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/arbeiten/holztuer-nach-mass/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/radovi/drvena-vrata-po-meri/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/work/custom-wooden-door/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/en/projects/historic-library-windows/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/projects/historic-library-windows/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/projekte/fenster-historische-bibliothek/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/projekti/prozori-istorijske-biblioteke/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/projects/historic-library-windows/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/projekte/fenster-historische-bibliothek/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/projects/historic-library-windows/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/projekte/fenster-historische-bibliothek/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/projekti/prozori-istorijske-biblioteke/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/projects/historic-library-windows/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/projekti/prozori-istorijske-biblioteke/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/projects/historic-library-windows/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/projekte/fenster-historische-bibliothek/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/projekti/prozori-istorijske-biblioteke/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/projects/historic-library-windows/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/en/projects/old-school-windows/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/projects/old-school-windows/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/projekte/fenster-altes-schulhaus/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/projekti/prozori-stare-skole/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/projects/old-school-windows/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/projekte/fenster-altes-schulhaus/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/projects/old-school-windows/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/projekte/fenster-altes-schulhaus/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/projekti/prozori-stare-skole/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/projects/old-school-windows/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/projekti/prozori-stare-skole/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/projects/old-school-windows/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/projekte/fenster-altes-schulhaus/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/projekti/prozori-stare-skole/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/projects/old-school-windows/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/en/projects/old-family-house/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/projects/old-family-house/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/projekte/altes-familienhaus/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/projekti/stara-porodicna-kuca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/projects/old-family-house/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/projekte/altes-familienhaus/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/projects/old-family-house/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/projekte/altes-familienhaus/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/projekti/stara-porodicna-kuca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/projects/old-family-house/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/projekti/stara-porodicna-kuca/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/projects/old-family-house/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/projekte/altes-familienhaus/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/projekti/stara-porodicna-kuca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/projects/old-family-house/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/en/projects/oak-table-for-a-family-home/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/projects/oak-table-for-a-family-home/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/projekte/eichentisch-fuer-ein-familienhaus/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/projekti/hrastov-sto-za-porodicni-dom/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/projects/oak-table-for-a-family-home/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/projekte/eichentisch-fuer-ein-familienhaus/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/projects/oak-table-for-a-family-home/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/projekte/eichentisch-fuer-ein-familienhaus/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/projekti/hrastov-sto-za-porodicni-dom/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/projects/oak-table-for-a-family-home/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/projekti/hrastov-sto-za-porodicni-dom/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/projects/oak-table-for-a-family-home/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/projekte/eichentisch-fuer-ein-familienhaus/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/projekti/hrastov-sto-za-porodicni-dom/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/projects/oak-table-for-a-family-home/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/en/projects/panelled-entrance-door/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/projects/panelled-entrance-door/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/projekte/kassetten-haustuer/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/projekti/ulazna-vrata-sa-kasetama/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/projects/panelled-entrance-door/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/projekte/kassetten-haustuer/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/projects/panelled-entrance-door/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/projekte/kassetten-haustuer/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/projekti/ulazna-vrata-sa-kasetama/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/projects/panelled-entrance-door/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/projekti/ulazna-vrata-sa-kasetama/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/projects/panelled-entrance-door/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/projekte/kassetten-haustuer/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/projekti/ulazna-vrata-sa-kasetama/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/projects/panelled-entrance-door/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/en/journal/caring-for-solid-wood/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/journal/caring-for-solid-wood/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/journal/pflege-von-massivholz/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/iz-radionice/nega-masivnog-drveta/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/journal/caring-for-solid-wood/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/journal/pflege-von-massivholz/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/journal/caring-for-solid-wood/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/journal/pflege-von-massivholz/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/iz-radionice/nega-masivnog-drveta/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/journal/caring-for-solid-wood/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/iz-radionice/nega-masivnog-drveta/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/journal/caring-for-solid-wood/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/journal/pflege-von-massivholz/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/iz-radionice/nega-masivnog-drveta/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/journal/caring-for-solid-wood/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/en/journal/what-makes-an-old-window-worth-saving/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/journal/what-makes-an-old-window-worth-saving/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/journal/wann-sich-ein-altes-fenster-lohnt/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/iz-radionice/kada-vredi-sacuvati-stari-prozor/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/journal/what-makes-an-old-window-worth-saving/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/journal/wann-sich-ein-altes-fenster-lohnt/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/journal/what-makes-an-old-window-worth-saving/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/journal/wann-sich-ein-altes-fenster-lohnt/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/iz-radionice/kada-vredi-sacuvati-stari-prozor/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/journal/what-makes-an-old-window-worth-saving/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/iz-radionice/kada-vredi-sacuvati-stari-prozor/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/journal/what-makes-an-old-window-worth-saving/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/journal/wann-sich-ein-altes-fenster-lohnt/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/iz-radionice/kada-vredi-sacuvati-stari-prozor/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/journal/what-makes-an-old-window-worth-saving/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/en/journal/why-we-still-build-wooden-windows/</loc>
+    <lastmod>2026-03-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/journal/why-we-still-build-wooden-windows/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/journal/warum-wir-noch-holzfenster-bauen/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/iz-radionice/zasto-i-dalje-pravimo-drvene-prozore/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/journal/why-we-still-build-wooden-windows/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/de/journal/warum-wir-noch-holzfenster-bauen/</loc>
+    <lastmod>2026-03-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/journal/why-we-still-build-wooden-windows/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/journal/warum-wir-noch-holzfenster-bauen/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/iz-radionice/zasto-i-dalje-pravimo-drvene-prozore/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/journal/why-we-still-build-wooden-windows/"/>
+  </url>
+  <url>
+    <loc>https://www.drveno.com/sr/iz-radionice/zasto-i-dalje-pravimo-drvene-prozore/</loc>
+    <lastmod>2026-03-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drveno.com/en/journal/why-we-still-build-wooden-windows/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.drveno.com/de/journal/warum-wir-noch-holzfenster-bauen/"/>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://www.drveno.com/sr/iz-radionice/zasto-i-dalje-pravimo-drvene-prozore/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drveno.com/en/journal/why-we-still-build-wooden-windows/"/>
+  </url>
+</urlset>
